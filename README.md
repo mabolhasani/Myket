@@ -9,7 +9,7 @@ Install-Package MyketApi -Version 1.0.1
 ```
 ##### .NET CLI
 ```
-dotnet add package kavenegar --version 1.2.4
+dotnet add package kavenegar --version 1.0.1
 ```
 ---
 ### Usage 
