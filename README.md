@@ -1,31 +1,42 @@
-# Myket Restful Api
----
-This is a simple library for myket restful api
-## Installation
----
+# Myket Rest API Documentation 
+This is a simple C# implantation of Myket Rest API,
+for more information you can go to Myket documentation [page](https://myket.ir/kb/en/pages/verification-of-in-app-purchases-on-the-server/) 
+
+# Installation
 ##### Package Manager
 ```
-Install-Package MyketApi -Version 1.0.1
+Install-Package MyketApi -Version 1.1.0
 ```
 ##### .NET CLI
 ```
-dotnet add package kavenegar --version 1.0.1
+dotnet add package MyketApi --version 1.1.0
 ```
----
-### Usage 
----
+# Usage 
+First of all you must create configuration instance and initialize it with proper config
 ```csharp
-var config= new Configuration("Your Myket AccessToken", "Your Package Name");
-var myket = new MyketApi(config);
-var result = await myket.VerifyPurchase("Your SKU Id", "Your Token");
-if (result.Successful)
-{
-    //...
-}
-else
-{
-    //check the result.Error 
-    //...
-}
+var config = new MyketConfiguration(
+                "Your Myket AccessToken", "Your Package Name");
+```
+Then pass it to MyketClient 
+```csharp
+var client = new MyketClient(config);
+```
+And then with this function you can verify purchase
+```csharp
+var result = await client.VerifyPurchaseAsync("SKU Id", "Token");
+```
+### Usage of the result
+```csharp
+ if (result.Successful)
+ {
+	 //use result.PurchaseResult
+	 //...
+ }
+ else
+ {
+	 //use result.Error
+	 //...
+ }
 ```
 ---
+***Feel free to contact me or fork this repository for improvement :)***
