@@ -1,4 +1,6 @@
 # Myket Rest API Documentation 
+![.NET](https://github.com/mabolhasani/Myket/workflows/.NET/badge.svg)
+[![NuGet version (MyketApi)](https://img.shields.io/nuget/v/MyketApi.svg?style=flat-square)](https://www.nuget.org/packages/MyketApi/)
 This is a simple C# implantation of Myket Rest API,
 for more information you can go to Myket documentation [page](https://myket.ir/kb/en/pages/verification-of-in-app-purchases-on-the-server/) 
 
