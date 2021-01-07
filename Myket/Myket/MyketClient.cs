@@ -5,18 +5,18 @@ using System.Threading.Tasks;
 
 namespace Myket
 {
-    public class MyketApi
+    public class MyketClient
     {
-        private readonly Configuration _configuration;
+        private readonly MyketConfiguration _configuration;
         private readonly HttpClient _client;
         private const string BaseUrl = "https://developer.myket.ir/";
-        public MyketApi(Configuration configuration)
+        public MyketClient(MyketConfiguration configuration)
         {
             _configuration = configuration;
             _client = new HttpClient();
         }
 
-        public async Task<VerifyPurchaseResult> VerifyPurchase(string sku, string token)
+        public async Task<VerifyPurchaseResult> VerifyPurchaseAsync(string sku, string token)
         {
             _client.DefaultRequestHeaders.Add("X-Access-Token", _configuration.AccessToken);
 
@@ -27,7 +27,7 @@ namespace Myket
 
             if (response.IsSuccessStatusCode)
             {
-                var result = JsonConvert.DeserializeObject<Result>(
+                var result = JsonConvert.DeserializeObject<PurchaseResult>(
                     await response.Content.ReadAsStringAsync());
 
                 return new VerifyPurchaseResult(result);

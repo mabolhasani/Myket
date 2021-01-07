@@ -3,7 +3,7 @@ using System;
 
 namespace Myket.Models
 {
-    public class Result
+    public class PurchaseResult
     {
         [JsonProperty("consumptionState")]
         public bool ConsumptionState { get; set; }

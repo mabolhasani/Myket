@@ -6,20 +6,20 @@
 
         public Error Error { get; }
 
-        public Result Result { get; }
+        public PurchaseResult PurchaseResult { get; }
 
-        public VerifyPurchaseResult(Result result)
+        public VerifyPurchaseResult(PurchaseResult result)
         {
             Successful = true;
             Error = default;
-            Result = result;
+            PurchaseResult = result;
         }
 
         public VerifyPurchaseResult(Error error = default)
         {
             Successful = false;
             Error = error;
-            Result = default;
+            PurchaseResult = default;
         }
     }
 }

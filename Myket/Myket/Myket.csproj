@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Authors>Mohammad</Authors>
+    <Authors>Mohammad Abolhasani</Authors>
     <Company />
     <Product>MyketApi</Product>
     <PackageId>MyketApi</PackageId>
@@ -10,7 +10,10 @@
     <RepositoryUrl>https://github.com/mabolhasani/Myket</RepositoryUrl>
     <PackageIcon>myket.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
-    <Version>1.0.1</Version>
+    <Version>1.1.0</Version>
+    <PackageLicenseFile></PackageLicenseFile>
+    <Copyright>Copyright © Mohammad Abolhasani 2021</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
