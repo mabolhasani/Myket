@@ -21,5 +21,3 @@ jobs:
       run: dotnet restore ./Myket/Myket.sln
     - name: Build
       run: dotnet build ./Myket/Myket.sln --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
